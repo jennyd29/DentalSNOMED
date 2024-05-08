@@ -1,3 +1,4 @@
+# load packages
 library(tidyverse)
 
 # read in files
@@ -9,7 +10,7 @@ tooth_permanent <- read.delim("Data/tooth_permanent.txt")
 tooth_supernumerary <- read.delim("Data/tooth_supernumerary.txt")
 tooth_surface <- read.delim("Data/tooth_surface.txt")
 
-# add column to each data frame
+# add column to each data frame with name of original file
 oral_surgery <- oral_surgery %>% 
   mutate(original_file = "dental_oral_surgery")
 

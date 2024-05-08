@@ -1,3 +1,4 @@
+# URLs of text files to download
 url <- c("https://www.nhsbsa.nhs.uk/sites/default/files/2021-07/DENT_ORAL_SURG_1.1_ClusterMembers_SCT_MIBO_20190315165859.txt", 
          "https://www.nhsbsa.nhs.uk/sites/default/files/2023-04/DENT_PROCEDURES_1.1_ClusterMembers_SCT_MIBO_20190315164425.txt", 
          "https://www.nhsbsa.nhs.uk/sites/default/files/2023-04/DENT_PROCEDURES_BY_TOOTH_1.1_ClusterMembers_SCT_MIBO_20190315163708.txt", 
@@ -6,6 +7,7 @@ url <- c("https://www.nhsbsa.nhs.uk/sites/default/files/2021-07/DENT_ORAL_SURG_1
          "https://www.nhsbsa.nhs.uk/sites/default/files/2021-07/DENT_TOOTH_SUPER_1.1_ClusterMembers_SCT_MIBO_20190315162700.txt", 
          "https://www.nhsbsa.nhs.uk/sites/default/files/2021-07/DENT_TOOTH_SURFACE_1.1_ClusterMembers_SCT_MIBO_20190315163329.txt")
 
+# destination to download text files to
 dest <- c("Data/oral_surgery.txt", 
           "Data/procedures.txt", 
           "Data/procedures_by_tooth.txt", 
@@ -14,6 +16,7 @@ dest <- c("Data/oral_surgery.txt",
           "Data/tooth_supernumerary.txt", 
           "Data/tooth_surface.txt")
 
+# download each file in url and saved to corresponding location in dest
 for (i in seq_along(url)){
   download.file(url[i], dest[i], mode = "wb")
 }
