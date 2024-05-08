@@ -4,4 +4,5 @@ Download [published NHSBSA dental SNOMED codes](https://www.nhsbsa.nhs.uk/provid
 
 ## Usage
 
-download_files.R requires you have a folder called 'Data' in your working directory.
+1. download_files.R: downloads the published files and saves them locally. Requires a folder called 'Data' in the working directory.
+2. append_tables.R: adds a column to each table with the name of the origin file then combines the tables and saves output as a csv. Requires a folder called 'Data' in the working directory.
